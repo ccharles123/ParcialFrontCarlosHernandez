@@ -11,7 +11,7 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (user.NombreCancion.length >= 3 && user.NombreCancion.charAt !== "" && user.AutorCancion.length>=6) {
+    if (user.NombreCancion.length >= 3 && user.NombreCancion.charAt(0) !== "" && user.AutorCancion.length>=6) {
       setShow(true);
       setErr(false);
     } else {
@@ -39,7 +39,6 @@ const Form = () => {
       {show && <Card nombre={user.NombreCancion} autor={user.AutorCancion} />}
     </div>
   )
-
 }
 
 export default Form
