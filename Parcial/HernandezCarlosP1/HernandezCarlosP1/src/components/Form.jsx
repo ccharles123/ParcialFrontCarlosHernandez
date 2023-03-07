@@ -17,7 +17,7 @@ const Form = () => {
     } else {
       setErr(true);
     }
-
+  };
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -39,7 +39,7 @@ const Form = () => {
       {show && <Card nombre={user.NombreCancion} autor={user.AutorCancion} />}
     </div>
   )
-}
+
 }
 
 export default Form
